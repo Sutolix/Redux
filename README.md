@@ -2,8 +2,6 @@
 
 `npm install react-router-dom`
 
-`npm install -g json-server`
-
-*(api fake para ambiente de desenvolvimento)*
+`npm install -g json-server` *(api fake para ambiente de desenvolvimento)*
 
 `json-server server.json -p 3333`
