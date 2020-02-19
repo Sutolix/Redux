@@ -7,3 +7,5 @@
 `json-server server.json -p 3333`
 
 `npm install redux react-redux`
+
+`npm install immer` *(pra facilitar nas questões de imutabilidade)*
