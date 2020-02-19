@@ -10,8 +10,13 @@ export default function reserve(state = [], action) {
                 //Caso houver, a resposta para essa constante será maior que 1
                 const tripIndex = draft.findIndex(trip => trip.id === action.trip.id)
 
+                if(action.trip.status === false){
+                    alert("Essa viagem está indisponivel no momento");
+                    return
+                }
+
                 if(tripIndex >= 0){
-                    //ele(amount) igual a ele mais um
+                    //ele(amount) igual a ele mesmo mais um
                     draft[tripIndex].amount +=1;
                 }else{
                     //adiciona a trip
@@ -26,13 +31,6 @@ export default function reserve(state = [], action) {
             return produce(state, draft => {
                 //Pega o id que será excluído baseado em que foi clicado
                 const tripIndex = draft.findIndex(trip => trip.id === action.id);
-                
-
-                //Caso haja mais de uma reserva para a mesma trip, excluirá uma por uma
-                if (draft[tripIndex].amount >= 2){
-                    draft[tripIndex].amount -=1;
-                    return
-                }
 
                 if(tripIndex >= 0 ){
                     //draft.splice exclui o dado (tripIndex na posição 1 já que é o único pois não há repetição de id)
@@ -40,6 +38,22 @@ export default function reserve(state = [], action) {
                 }
             
             });
+
+        case 'UPDATE_RESERVE': {
+            //Para que não aceite baixar de 0
+            if(action.amount <= 0){
+                return state;
+            }
+
+            return produce(state, draft => {
+                const tripIndex = draft.findIndex(trip => trip.id === action.id);
+
+                if(tripIndex >= 0){
+                    //Converte o + 1 ou - 1 do increment e decrement de string para número
+                    draft[tripIndex].amount = Number(action.amount);
+                }
+            })
+        }
         default:
             return state;
     }
