@@ -9,3 +9,5 @@
 `npm install redux react-redux`
 
 `npm install immer` *(pra facilitar nas questões de imutabilidade)*
+
+`npm install redux-saga`
