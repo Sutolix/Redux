@@ -5,26 +5,9 @@ export default function reserve(state = [], action) {
         case 'ADD_RESERVE_SUCCESS':
             //state original e draft que será a copia dela onde faremos as modificações
             return produce(state, draft => {
-
-                //Compara se já existe uma reserva com o mesmo id da qual está sendo adicionad
-                //Caso houver, a resposta para essa constante será maior que 1
-                const tripIndex = draft.findIndex(trip => trip.id === action.trip.id)
-
-                if(action.trip.status === false){
-                    alert("Essa viagem está indisponivel no momento");
-                    return
-                }
-
-                if(tripIndex >= 0){
-                    //ele(amount) igual a ele mesmo mais um
-                    draft[tripIndex].amount +=1;
-                }else{
-                    //adiciona a trip
-                    draft.push({
-                        ...action.trip,
-                        amount: 1,
-                    });
-                }
+                //adiciona a trip ao array
+                draft.push(action.trip);
+                
             });
 
         case 'REMOVE_RESERVE':
@@ -58,3 +41,28 @@ export default function reserve(state = [], action) {
             return state;
     }
 }
+
+
+/*OLD CODE ADD_RESERVE_SUCESS*/
+/*
+//Compara se já existe uma reserva com o mesmo id da qual está sendo adicionad
+    //Caso houver, a resposta para essa constante será maior que 1
+    const tripIndex = draft.findIndex(trip => trip.id === action.trip.id)
+
+    if(action.trip.status === false){
+        alert("Essa viagem está indisponivel no momento");
+        return
+    }
+
+    if(tripIndex >= 0){
+    //ele(amount) igual a ele mesmo mais um
+        draft[tripIndex].amount +=1;
+    }else{
+    //adiciona a trip
+        draft.push({
+            ...action.trip,
+            amount: 1,
+        });
+    
+    }
+*/
