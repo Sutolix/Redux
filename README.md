@@ -11,3 +11,5 @@
 `npm install immer` *(pra facilitar nas questões de imutabilidade)*
 
 `npm install redux-saga`
+
+`npm install history` *(controla a api de rotas do navegador)*
