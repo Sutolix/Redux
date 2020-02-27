@@ -1,6 +1,6 @@
 # Redux
 
-![Peek 27-02-2020 11-01](https://user-images.githubusercontent.com/56132780/75452236-aba20800-5950-11ea-8ab2-bf0e0d8630b6.gif)
+![Peek 27-02-2020 11-06](https://user-images.githubusercontent.com/56132780/75452618-64684700-5951-11ea-8890-dedf3744b5de.gif)
 
 `npm install react-router-dom`
 
