@@ -6,11 +6,9 @@
 - React JS
 - Redux
 - Redux-saga
-- Criação de API fake em ambiente de desenvolvimento para consumo da aplicação
+- Criação de API fake em ambiente de desenvolvimento para consumo na aplicação
 
-
-
-#### Comandos executados
+#### Comandos executados durante a criação
 
 `npm install react-router-dom`
 
@@ -18,10 +16,10 @@
 
 `npm install redux-saga`
 
-`npm install -g json-server` *(api fake para ambiente de desenvolvimento)*
+`npm install -g json-server`
 
 `json-server server.json -p 3333`
 
-`npm install immer` *(pra facilitar nas questões de imutabilidade)*
+`npm install immer`
 
-`npm install history` *(controla a api de rotas do navegador)*
+`npm install history`
