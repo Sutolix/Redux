@@ -1,4 +1,4 @@
-# Redux
+# Sistema base de reservas usando Redux
 
 ![Peek 27-02-2020 11-06](https://user-images.githubusercontent.com/56132780/75452618-64684700-5951-11ea-8890-dedf3744b5de.gif)
 
