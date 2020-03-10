@@ -6,7 +6,7 @@
 - React JS
 - Redux
 - Redux-saga
-- Criação de API fake em ambiente de desenvolvimento para consumo na aplicação
+- Creation of fake API in development environment for consumption in the application
 
 #### Commands executed during creation
 
